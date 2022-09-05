@@ -46,6 +46,8 @@ function App() {
     for (let i = 0; i < 5; i++) {
       currWord += board[currAttempt.attempt][i]
     }
+    console.log(currWord.toLowerCase());
+    console.log(wordSet);
 
     if (wordSet.has(currWord.toLowerCase())) {
       setCurrAttempt({
@@ -56,7 +58,9 @@ function App() {
       alert('word not found')
     }
 
-
+    if (currWord === correctWord) {
+      alert ('Game ended!')
+    }
   }
 
   return (
